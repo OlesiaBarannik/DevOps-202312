@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd path/to/your/project  # Change this to the correct path
+          cd DevOps-202312  # Adjust this to the correct path within your repository
           poetry install
 
       - name: Build and analyze
@@ -54,7 +54,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
-          # Add any other setup or pre-processing steps you need
-          # e.g., python setup.py build
-          mvn -B verify sonar:sonar -Dmaven.test.failure.ignore=true
+          # Add any other setup or pre-processing steps you
 
