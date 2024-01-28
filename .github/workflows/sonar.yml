@@ -40,8 +40,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
 
+      - name: Display current directory
+        run: pwd
+
       - name: Install dependencies
-        run: poetry install
+        run: |
+          cd path/to/your/project  # Change this to the correct path
+          poetry install
 
       - name: Build and analyze
         env:
@@ -52,3 +57,4 @@ jobs:
           # Add any other setup or pre-processing steps you need
           # e.g., python setup.py build
           mvn -B verify sonar:sonar -Dmaven.test.failure.ignore=true
+
